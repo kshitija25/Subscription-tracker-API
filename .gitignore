@@ -6,3 +6,23 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+# node
+node_modules/
+npm-debug.log*
+dist/
+coverage/
+
+# env & local config
+.env
+.env.*
+*.env
+!/.env.example        # allow the template to be committed
+config/*.local.*
+!config/*.example     # allow example config files
+*.key
+*.pem
+
+# logs
+logs/
+*.log
