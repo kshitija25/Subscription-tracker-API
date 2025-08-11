@@ -1,4 +1,4 @@
-Subscription Tracker API
+Subscription Tracker API:
 A Node.js + Express + MongoDB backend to track user subscriptions (Netflix, Spotify, etc.), with JWT auth, Arcjet middleware (optional), and Upstash/QStash workflow hook for renewal reminders.
 
 Features
@@ -356,35 +356,6 @@ Edit
 { "success": false, "error": "You are not the owner of this account!" }
 Validation errors show Mongoose messages (e.g., enum mismatch, invalid dates).
 
-Project Structure (typical)
-graphql
-Copy
-Edit
-subscription-tracker-api/
-├─ app.js
-├─ package.json
-├─ .env.example
-├─ config/
-│  ├─ env.js
-│  ├─ nodemailer.js          # optional if sending real emails
-│  ├─ upstash.js             # workflow client
-├─ models/
-│  ├─ user.model.js
-│  └─ subscription.model.js
-├─ controllers/
-│  ├─ auth.controller.js
-│  └─ subscriptions.controller.js
-├─ middlewares/
-│  ├─ auth.middleware.js
-│  └─ arcjet.middleware.js   # optional
-├─ routes/
-│  ├─ auth.routes.js
-│  ├─ subscriptions.routes.js
-│  └─ workflows.routes.js    # POST /subscription/reminder
-├─ utils/
-│  └─ send-email.js          # optional
-Security Notes
-Never commit real .env files. Only .env.example is in git.
 
 Use HTTPS in prod (Nginx + Let’s Encrypt).
 
